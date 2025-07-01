@@ -14,7 +14,6 @@ A full-stack TypeScript template for local app development with React frontend a
 - **Framework**: React 19 with TypeScript
 - **Build Tool**: Vite
 - **UI Library**: Material-UI (MUI)
-- **Styling**: Emotion (CSS-in-JS)
 - **Development**: Hot Module Replacement (HMR)
 
 ## Getting Started
@@ -54,23 +53,22 @@ A full-stack TypeScript template for local app development with React frontend a
    ```
 
 3. Customize your database schema:
-   ```bash
-   # Edit prisma/schema.prisma to define your data models
+   ```
    # Example:
-   # model User {
-   #   id    Int     @id @default(autoincrement())
-   #   name  String
-   #   email String  @unique
-   #   posts Post[]
-   # }
-   # 
-   # model Post {
-   #   id     Int    @id @default(autoincrement())
-   #   title  String
-   #   content String
-   #   author User   @relation(fields: [authorId], references: [id])
-   #   authorId Int
-   # }
+   model User {
+      id    Int     @id @default(autoincrement())
+      name  String
+      email String  @unique
+      posts Post[]
+   }
+    
+   model Post {
+      id     Int    @id @default(autoincrement())
+      title  String
+      content String
+      author User   @relation(fields: [authorId], references: [id])
+      authorId Int
+   }
    ```
 
 4. Set up the database:
