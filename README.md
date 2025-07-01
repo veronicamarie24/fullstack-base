@@ -20,9 +20,9 @@ A full-stack TypeScript template for local app development with React frontend a
 
 ### 1. Clone and Customize
 
-1. Clone this repository:
+1. Clone this repository (shallow clone to avoid full history):
    ```bash
-   git clone https://github.com/veronicamarie24/fullstack-base.git your-app-name
+   git clone --depth=1 https://github.com/veronicamarie24/fullstack-base.git your-app-name
    cd your-app-name
    ```
 
